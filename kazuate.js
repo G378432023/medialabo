@@ -4,32 +4,34 @@ console.log('答え（デバッグ用）: ' + answer);
 
 // 入力回数（予想回数）
 let number = 0;
-
-// 予想を4回実行する
-// 将来以下の judge(); の4回の呼び出しを全て削除する
-// 代わりにここでは，ボタンを押したら judge() を呼び出すイベント処理をする
-judge();
-judge();
-judge();
-judge();
+let over = false;
 
 // ボタンを押した後の処理をする関数 judge() の定義
 function judge() {
-  // 将来ここでは 4 ではなくテキストボックスに指定された数値を yoso に代入する
-  let guess = 4;
+  let guess = document.forms.form1.guess.value;
   
   // 課題3-1: 正解判定する
   let correct;
-  if (number == answer) {
+  if (guess == answer) {
     correct = true;
   } else {
     correct = false;
   }
+
   // kotae と yoso が一致するかどうか調べて結果を出力
+  console.log(++number + "回目の予想：" + guess);
+
   // 課題3-1における出力先はコンソール
-  if (correct) {
+  if (over || (number == 4)) {
+    console.log("答えは" + answer + "です。ゲームはすでに終了しています。");
+  } else if (correct) {
     console.log("正解");
+    over = true;
   } else {
-    console.log("不正解");
+    if (answer < guess) {
+        console.log("不正解。もっと小さい");
+    } else {
+        console.log("不正解。もっと大きい")
+    }
   }
 }

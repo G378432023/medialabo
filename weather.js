@@ -46,6 +46,7 @@ let data = {
 };
 
 ////////// 課題3-2 ここからプログラムを書こう
+console.log("都市：" + data.name);
 console.log("経度：" + data.coord.lon);
 console.log("緯度：" + data.coord.lat);
 console.log("天気：" + data.weather[0].description);

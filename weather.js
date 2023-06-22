@@ -55,3 +55,6 @@ console.log("最高気温：" + data.main.temp_max);
 console.log("湿度：" + data.main.humidity);
 console.log("風速：" + data.wind.speed);
 console.log("風向：" + data.wind.deg);
+console.log("拡張課題");
+let coord = data.coord;
+Object.keys(data);

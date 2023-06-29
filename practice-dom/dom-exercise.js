@@ -14,12 +14,11 @@ let data = [
 //// 注意: 以上は編集しないこと!
 
 // 練習4-2 メッセージ追加プログラム
-let elemEx42 = document.getElementById("ex42");
-let textToInsert = '<p style="text-emphasis: sesami green;">写真表と都市の都市の緯度経度のページです。</p>';
-let newElem = document.createElement('p');
-newElem.style.textEmphasis = 'sesami green';
-newElem.textContent = '写真表と都市の都市の緯度経度のページです。';
-elemEx42.parentNode.insertBefore(newElem, elemEx42.nextSibling);
+let newElement = document.createElement("p");
+newElement.style.textEmphasis = "sesami green";
+newElement.textContent = "写真表と都市の都市の緯度経度のページです。";
+let parentElement = document.getElementById("ex42");
+parentElement.insertAdjacentElement("afterend", newElement);
 
 
 // 練習4-3 写真表作成プログラム

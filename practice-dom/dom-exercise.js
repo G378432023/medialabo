@@ -14,13 +14,41 @@ let data = [
 //// 注意: 以上は編集しないこと!
 
 // 練習4-2 メッセージ追加プログラム
+let elemEx42 = document.getElementById("ex42");
+let textToInsert = '<p style="text-emphasis: sesami green;">写真表と都市の都市の緯度経度のページです。</p>';
+let newElem = document.createElement('p');
+newElem.style.textEmphasis = 'sesami green';
+newElem.textContent = '写真表と都市の都市の緯度経度のページです。';
+elemEx42.parentNode.insertBefore(newElem, elemEx42.nextSibling);
 
 
 // 練習4-3 写真表作成プログラム
-
+let elemPhototable = document.getElementById("phototable");
+elemPhototable.innerHTML += `
+							<p>
+								<img src="taro.png">
+							</p>
+							<p>
+								<img src="jiro.png">
+							</p>
+							<p>
+								<img src="hanako.png">
+							</p>
+							`;
 
 // 練習4-4 箇条書き削除プログラム
+let list = document.getElementById("location");
+let liElements = list.getElementsByTagName("li");
+
+for (var i = liElements.length - 1; i >= 0; i--) {
+	var li = liElements[i];
+    li.parentNode.removeChild(li);
+}
 
 
-// 練習4-5 箇条書き追加プログラム
-
+// 練習4-5 箇条書き追加プログラム 
+data.forEach(function(item) {
+	let liElement = document.createElement('li');
+	liElement.textContent = item.name + ' : ' + item.lat + ', ' + item.lng;
+	list.appendChild(liElement);
+});

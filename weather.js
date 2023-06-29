@@ -58,3 +58,25 @@ console.log("風向：" + data.wind.deg);
 console.log("拡張課題");
 let coord = data.coord;
 Object.keys(data);
+
+////////// 課題4-2
+window.addEventListener("load", function() {
+  let resultElem = document.getElementById("result");
+  
+  function insert(text){
+    resultElem.innerHTML += text;
+  }
+
+  insert('<h1>世界の天気</h1>');
+  insert('<h2>都市：' + data.name + '</h2>');
+  insert('<ul>');
+  insert('<li>経度：' + data.coord.lon + '</li>');
+  insert('<li>緯度：' + data.coord.lat + '</li>');
+  insert('<li>天気：' + data.weather[0].description + '</li>');
+  insert('<li>最低気温：' + data.main.temp_min + '</li>');
+  insert('<li>最高気温：' + data.main.temp_max + '</li>');
+  insert('<li>湿度：' + data.main.humidity + '</li>');
+  insert('<li>風速：' + data.wind.speed + '</li>');
+  insert('<li>風向：' + data.wind.deg + '</li>');
+  insert('</ul>');
+});

@@ -15,7 +15,7 @@ let data = [
 
 // 練習4-2 メッセージ追加プログラム
 let newElement = document.createElement("p");
-newElement.style.textEmphasis = "sesami green";
+newElement.style.textEmphasis = "sesame green";
 newElement.textContent = "写真表と都市の都市の緯度経度のページです。";
 let parentElement = document.getElementById("ex42");
 parentElement.insertAdjacentElement("afterend", newElement);

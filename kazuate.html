@@ -8,8 +8,8 @@
     <body>
         <h1>数当てゲーム</h1>
         <form name="form1">
-            <label>値を入力して。<input type="text" name="guess" value="4"></label> <br>
-            <button type="button" onclick="judge()">判定</button>
+            <label>値を入力して。<input type="number" name="guess" value="4"></label> <br>
+            <button type="button" id="button" onclick="judge()">判定</button>
         </form>
         <p><span id="time">○</span>回目の予想: <span id="guess">△</span></p>
         <!-- 結果表示 -->

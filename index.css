@@ -1,5 +1,5 @@
 body {
-    background-color: purple;
+    background-color: wheat;
 }
 
 #title {
@@ -57,16 +57,23 @@ body {
 }
 
 h1, h2, h3, p, li{
-    color: yellow;
+    color: black;
 }
 
 a {
-    color: lightgreen;
+    color: lightseagreen;
 }
 
 a:hover{
     color: white;
 }
 
+p {
+    padding-left: 100px;
+    padding-right: 100px;
+}
 
+ul, #kazuate {
+    padding-left: 100px;
+}
   

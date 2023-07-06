@@ -80,3 +80,9 @@ window.addEventListener("load", function() {
   insert('<li>風向：' + data.wind.deg + '</li>');
   insert('</ul>');
 });
+
+//課題5-2
+function getText() {
+  let text = document.forms.form1.town.value;
+  console.log("入力：" + text);
+}

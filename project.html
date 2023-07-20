@@ -4,24 +4,43 @@
         <meta charset="utf-8">
         <title>世界の天気</title>
         <script src="weather.js"></script>
+        <link rel="stylesheet" type="text/css" href="project.css">
     </head>
     <body>
-        <!-- <h1>世界の天気</h1>
-        <h2>東京都（検索結果1件）</h2>
-        <ul>
-            <li>経度：140</li>
-            <li>緯度：36</li>
-            <li>天気：快晴</li>
-            <li>最低気温：23</li>
-            <li>最高基本：26</li>
-            <li>湿度：45</li>
-            <li>風速：3</li>
-            <li>風向：197</li>
-        </ul> -->
         <form name="form1">
-            <label>都市名<input type="text" name="town"></label>
+            <label>都市名:
+                <select name="town">
+                    <option value="360630">Cairo (エジプト)</option>
+                    <option value="524901">Moscow (ロシア)</option>
+                    <option value="993800">Johannesburg (南アフリカ)</option>
+                    <option value="1816670">Beijing (中華人民共和国)</option>
+                    <option value="1850147">Tokyo (日本)</option>
+                    <option value="1880252">Singapore</option>
+                    <option value="2147714">Sydney (オーストラリア)</option>
+                    <option value="2643743">London (イギリス)</option>
+                    <option value="2968815">Paris (フランス)</option>
+                    <option value="3451189">Rio de Janeiro (ブラジル)</option>
+                    <option value="5128581">New York (アメリカ合衆国)</option>
+                    <option value="5368361">Los Angeles (アメリカ合衆国)</option>
+                </select>
+            </label>
             <button type="button" onclick="getText()">検索</button>
+            <br>
+            <label>詳細情報:
+                <select id="keySelect"></select>
+            </label>
+            <button type="button" onclick="displaySelectedData()">追加表示</button>
         </form>
         <div id="result"></div>
+        <details>
+            <summary>詳細情報訳</summary>
+            lon:経度
+            <br>
+            lat:緯度
+            <br>
+            temp:温度
+            <br>
+            pressure:気圧
+        </details>
     </body>
 </html>

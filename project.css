@@ -39,3 +39,7 @@ form button {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     white-space: pre-wrap; /* テキストの改行を反映させるため */
 }
+
+.d1 {
+    padding-left: 10px;
+}
